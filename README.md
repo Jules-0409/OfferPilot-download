@@ -8,14 +8,26 @@
 
 完整的 Boss 自动投递 / 读取岗位 / 无人值守,需要下载下面的桌面版(在你自己电脑上跑,用你自己的浏览器和账号,最安全)。
 
-## ⬇️ 下载桌面版(Windows)
+## ⬇️ 下载桌面版
 
-1. 到 **[Releases 页面](../../releases/latest)** 下载最新的 **`OfferPilot.exe`**。
-2. 双击运行。首次 Windows 可能弹「Windows 已保护你的电脑」→ 点 **更多信息** → **仍要运行**(因为暂未做代码签名)。
+到 **[Releases 页面](../../releases/latest)** 下载,Windows / Mac 各一个:
+
+### Windows
+1. 下载 **`OfferPilot.exe`**,双击运行。
+2. 首次可能弹「Windows 已保护你的电脑」→ 点 **更多信息** → **仍要运行**(因暂未做代码签名)。
+
+### macOS(Apple Silicon / M 系列芯片)
+1. 下载 **`OfferPilot-mac-AppleSilicon.zip`**,双击解压得到 `OfferPilot.app`,拖进「应用程序」。
+2. 首次打开会提示「无法验证开发者 / 已损坏」(同样因为未签名)。绕过方式二选一:
+   - **设置里允许**:双击一次(会被拦)→ 打开 **系统设置 → 隐私与安全性** → 拉到底点 **「仍要打开」**。
+   - **终端一行**(更稳):`xattr -dr com.apple.quarantine /Applications/OfferPilot.app`,然后再双击。
+3. (Intel 芯片的 Mac 暂未提供,需要的话联系作者。)
+
+### 然后(Win / Mac 通用)
 3. 浏览器会自动打开,按提示**填入你自己的 DeepSeek API Key**(去 <https://platform.deepseek.com> 注册创建,Key 只存在你本机、不上传)。
 4. 在「岗位匹配分析」页点 **打开隔离 Boss 浏览器** → 在弹出的独立 Chrome/Edge 窗口里登录 Boss → 回到界面读取岗位、分析、投递。
 
-> 无需预装 Python 或任何东西;电脑上有 **Chrome 或 Edge** 即可(Win10/11 自带 Edge)。
+> 无需预装 Python 或任何东西;电脑上有 **Chrome 或 Edge** 即可(Win10/11 自带 Edge;Mac 建议装 Chrome)。
 
 ## 为什么浏览器要在你自己电脑上跑?
 
